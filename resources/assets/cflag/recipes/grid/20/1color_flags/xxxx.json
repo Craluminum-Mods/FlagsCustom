@@ -1,0 +1,9 @@
+{
+  "ingredientPattern": "CC,CC",
+  "ingredients": {
+    "C": { "type": "item", "code": "clothp-20-*", "name": "color", "quantity": 5 }
+  },
+  "width": 2,
+  "height": 2,
+  "output": { "type": "block", "code": "flag-1color-{color}-east" }
+}

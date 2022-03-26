@@ -1,0 +1,16 @@
+{
+  "ingredientPattern": "FS",
+  "ingredients": {
+    "S": {
+      "type": "item",
+      "code": "clothp-20-*",
+      "name": "lower",
+      "quantity": 10,
+      "allowedVariants": ["black", "blue", "darkblue", "darkgreen", "green", "lightblue", "lightgreen", "orange", "pink", "plain", "purple", "red", "white", "yellow"]
+    },
+    "F": { "type": "item", "code": "clothp-20-*", "name": "upper", "quantity": 10, "allowedVariants": ["gray"] }
+  },
+  "width": 1,
+  "height": 2,
+  "output": { "type": "block", "code": "flag-hor2color-{upper}-{lower}-east" }
+}

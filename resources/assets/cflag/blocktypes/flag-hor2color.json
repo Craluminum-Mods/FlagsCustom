@@ -1,0 +1,104 @@
+{
+  "code": "flag",
+  "blockmaterial": "Cloth",
+  "attributes": { "handbook": { "groupBy": ["flag-hor2color-*"] } },
+  "creativeinventory": { "cflagc": ["*-east"] },
+  "variantGroups": [
+    { "code": "type", "states": ["hor2color"] },
+    { "code": "upper", "loadFromProperties": "cflag:clothcolor" },
+    { "code": "lower", "loadFromProperties": "cflag:clothcolor" },
+    { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+  ],
+  "skipVariants": [
+    "*-black-black-*",
+    "*-blue-blue-*",
+    "*-brown-brown-*",
+    "*-darkblue-darkblue-*",
+    "*-darkgreen-darkgreen-*",
+    "*-gray-gray-*",
+    "*-green-green-*",
+    "*-lightblue-lightblue-*",
+    "*-lightgreen-lightgreen-*",
+    "*-orange-orange-*",
+    "*-pink-pink-*",
+    "*-plain-plain-*",
+    "*-purple-purple-*",
+    "*-red-red-*",
+    "*-white-white-*",
+    "*-yellow-yellow-*"
+  ],
+  "behaviors": [{ "name": "BlockFlag" }],
+  "storageFlags": 257,
+  "heldRightTpIdleAnimation": "holdinglanternrighthand",
+  "heldLeftTpIdleAnimation": "holdinglanternlefthand",
+  "maxStackSize": 8,
+  "shape": {
+    "base": "block/flag-hor-2color",
+    "rotateYByType": {
+      "*-north": 90,
+      "*-south": -90,
+      "*-west": 180
+    }
+  },
+  "textures": {
+    "pole": { "base": "game:block/liquid/dye/gray" },
+    "hor2-1ByType": {
+      "@.*-hor2color-(dark|light).*": { "base": "extra/{upper}" },
+      "*-hor2color-plain-*": { "base": "game:block/cloth/linen/normal1" },
+      "*": { "base": "game:block/cloth/linen/{upper}" }
+    },
+    "hor2-2ByType": {
+      "@.*-hor2color-(.*)-(dark|light).*": { "base": "extra/{lower}" },
+      "*-hor2color-*-plain-*": { "base": "game:block/cloth/linen/normal1" },
+      "*": { "base": "game:block/cloth/linen/{lower}" }
+    }
+  },
+  "lightAbsorption": 0,
+  "resistance": 0.5,
+  "sideopaque": { "all": false },
+  "sidesolid": { "all": false },
+  "collisionBox": null,
+  "selectionBox": {
+    "x1": 0.4375,
+    "y1": 0,
+    "z1": 0,
+    "x2": 0.5625,
+    "y2": 1,
+    "z2": 1,
+    "rotateYByType": { "@.*-(east|west)": 90 }
+  },
+  "sounds": {
+    "place": "game:block/cloth",
+    "break": "game:block/cloth",
+    "hit": "game:block/cloth",
+    "walk": "game:walk/cloth"
+  },
+  "tpOffHandTransform": {
+    "translation": { "x": -1.4, "y": -1, "z": -0.93 },
+    "rotation": { "x": 0, "y": 0, "z": -90 },
+    "scale": 0.5
+  },
+  "tpHandTransform": {
+    "translation": { "x": -1.55, "y": -1, "z": -1 },
+    "rotation": { "x": 0, "y": 0, "z": -90 },
+    "scale": 0.5
+  },
+  "fpHandTransform": {
+    "rotation": { "x": 0, "y": 45, "z": 0 }
+  },
+  "guiTransform": {
+    "translation": { "x": -8, "y": 3, "z": 0 },
+    "scale": 1.4
+  },
+  "groundTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 0, "y": -45, "z": 0 },
+    "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+    "scale": 6
+  },
+  "drops": [
+    { "type": "block", "code": "pole" },
+    { "type": "item", "code": "clothp-20-{upper}", "quantity": { "avg": 10 } },
+    { "type": "item", "code": "clothp-20-{lower}", "quantity": { "avg": 10 } }
+  ]
+}
