@@ -2,7 +2,7 @@
   "code": "flag",
   "blockmaterial": "Cloth",
   "attributes": { "handbook": { "groupBy": ["flag-1color-*"] } },
-  "creativeinventory": { "cflagc": ["*-east"] },
+  "creativeinventory": { "cflag": ["*-east"] },
   "variantGroups": [
     { "code": "type", "states": ["1color"] },
     { "code": "color", "loadFromProperties": "cflag:clothcolor" },
